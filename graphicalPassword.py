@@ -95,9 +95,9 @@ framePassword = tk.Canvas(window, width=10, height=10)
 framePassword.grid(columnspan=4)
 
 
-
-tk.Label(frameUser, font=('Arial', 12), text='Login Form').grid(column= 0, row=0, columnspan=2)
-tk.Label(frameUser, font=('Arial', 10), text='Username:').grid(column=0, row=1, sticky='e')
+#Labels
+tk.Label(frameUser, font=('Arial', 12), text='Login Form', padx=10, pady=10).grid(column= 0, row=0, columnspan=2)
+tk.Label(frameUser, font=('Arial', 10), text='Username:', padx=10, pady=10).grid(column=0, row=1, sticky='e')
 
 
 #entry block
