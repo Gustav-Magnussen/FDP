@@ -3,7 +3,7 @@ Github page for my praticle examples implementation of alternative methods for u
 
 # Graphical implemetation
 
-This implementation can be found in the following [folder](https://github.com/Gustav-Magnussen/FDP/tree/main/graphical) and includes the necessary files to run the a program that showcases a practicle [example] of user authentication by utilizing a graphical password.
+This implementation can be found in the following [folder](https://github.com/Gustav-Magnussen/FDP/tree/main/graphical) and includes the necessary files to run the program that showcases a practicale [example](https://github.com/Gustav-Magnussen/FDP/blob/main/graphical/graphicalPassword_3.py) of user authentication by utilizing a graphical password. This program is designed for python 3.7.
 
 ### Features
 
@@ -14,18 +14,18 @@ This implementation can be found in the following [folder](https://github.com/Gu
 
 ### Dependencies
 
-In order for the attached [program](https://raw.githubusercontent.com/Gustav-Magnussen/FDP/main/graphical/graphicalPassword_3.py) to function proparly a number of python packages has to be installed. The program uses the following packages that come with a default installation of python:
+In order for the attached [program](https://raw.githubusercontent.com/Gustav-Magnussen/FDP/main/graphical/graphicalPassword_3.py) to function proparly python 3.7 has to be insatllaed and a number of python packages has to be aquired The program uses the following packages that come with a default installation of python:
 
 * Os
 * sys
 * sqlite3
 
-Attached is a scripted called [dependencies.sh](https://raw.githubusercontent.com/Gustav-Magnussen/FDP/main/dependencies.sh), this can be used to install the other necessary packages on a Linux Ubuntu enviroment. The other packages that are necessary to run the program are:
+Attached is a scripted called [dependencies.sh](https://raw.githubusercontent.com/Gustav-Magnussen/FDP/main/dependencies.sh), this can be used to install the other necessary packages on a Linux Ubuntu enviroment. The other packages that are include in this script and necessary to run the program are:
 
 * argon2-cffi
 * python3-tk
 
-These packages can be installed using the following format:
+The [argon2-cffi](https://pypi.org/project/argon2-cffi/) package is used in order to hash the graphical passwords. Python3-tk is used as to display graphical elements in the program.  These packages can be installed using the following command in a python enviroment:
 
 ```
 >>>pip install [package]
@@ -51,5 +51,5 @@ Within the program [grapicalPassword.py](https://raw.githubusercontent.com/Gusta
 ![User entry for account john](https://github.com/Gustav-Magnussen/FDP/blob/main/graphical/images/john.png)
 
 
-
-
+### Author
+* [Gustav Martin Kvilhaug Magnussen](https://github.com/Gustav-Magnussen)
