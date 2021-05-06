@@ -8,9 +8,9 @@ ph = argon2.PasswordHasher()
 
 #Start tkinter window
 window = tk.Tk()
+window.geometry("200x200")
 
 buttonValues = []
-
 #Connection to database
 connect = sqlite3.connect('users.db')
 
@@ -19,6 +19,11 @@ cr = connect.cursor()
 command = """CREATE TABLE IF NOT EXISTS
 users(user_id INTEGER PRIMARY KEY, username TEXT, password TEXT)"""
 cr.execute(command)
+
+#Uncomment to in order to add test data
+#cr.execute("INSERT INTO users (username, password) VALUES (?,?)",('bob','$argon2id$v=19$m=102400,t=2,p=8$JSo0Mx39wcxBVJHsBywhrQ$deop6ytHU+vu2rBAJdEoRA' ))
+#cr.execute("INSERT INTO users (username, password) VALUES (?,?)",('john','$argon2id$v=19$m=102400,t=2,p=8$qGZ6+0cPtsdJOhUpKGho9g$j7pFGeeQssHe/0m7y+ks4g' ))
+#cr.commit()
 
 def getPasswordUsername(username):
     """
@@ -127,7 +132,6 @@ def usernameClick():
     if wrong == 1:
         wrongInput.grid(column= 1, row=9)
 
-
 #Frames
 frameUser = tk.Canvas(window, width=300, height=100)
 frameUser.grid(columnspan=3)
@@ -138,7 +142,6 @@ framePassword.grid(columnspan=4)
 
 #Labels
 
-tk.Label(frameUser, font=('Arial', 12), text='Login Form', padx=10, pady=10).grid(column= 0, row=0, columnspan=2)
 tk.Label(frameUser, font=('Arial', 10), text='Username:', padx=10, pady=10).grid(column=0, row=1, sticky='e')
 
 
@@ -197,6 +200,5 @@ submitBtn.grid(column=0, row=8, sticky='e')
 resetBtn = tk.Button(text='Reset entries',width=6,height=1, padx=10, command=reset)
 resetBtn.grid(column=1, row=8, sticky='w')
 wrongInput = tk.Label(font=("Arial", 12), text='Wrong Username/password')
-
 
 window.mainloop()
