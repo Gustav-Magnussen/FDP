@@ -27,7 +27,7 @@ Attached is a scripted called [dependencies.sh](https://raw.githubusercontent.co
 
 The packages can be installed using the following format:
 
-'''
+```
 >>>pip install [package]
-'''
+```
 
