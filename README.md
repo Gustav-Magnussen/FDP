@@ -25,7 +25,7 @@ Attached is a scripted called [dependencies.sh](https://raw.githubusercontent.co
 * argon2-cffi
 * python3-tk
 
-The [argon2-cffi](https://pypi.org/project/argon2-cffi/) package is used in order to hash the graphical passwords. Python3-tk is used as to display graphical elements in the program.  These packages can be installed using the following command in a python environment:
+The [argon2-cffi](https://pypi.org/project/argon2-cffi/) package is used in order to hash the graphical passwords. [Python3-tk](https://docs.python.org/3/library/tkinter.html) is used as to display graphical elements in the program.  These packages can be installed using the following command in a python environment:
 
 ```
 >>>pip install [package]
