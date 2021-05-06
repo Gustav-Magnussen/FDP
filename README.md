@@ -1,7 +1,7 @@
 # FDP
 GitHub page for my practical examples implementation of alternative methods for user authentication. This is part of my final degree project titled: Alternative methods of user authentication and development of practical examples. It contains a two implementation of alternative methods for user authentication: a graphical implementation and a biometric implementation.
 
-# Graphical implementation
+## Graphical implementation
 
 This implementation can be found in the following [folder](https://github.com/Gustav-Magnussen/FDP/tree/main/graphical) and includes the necessary files to run the program that showcases a practical [example](https://github.com/Gustav-Magnussen/FDP/blob/main/graphical/graphicalPassword_3.py) of user authentication by utilizing a graphical password. This program is designed for python 3.7.
 
@@ -50,6 +50,7 @@ Within the program [grapicalPassword.py](https://raw.githubusercontent.com/Gusta
 ![User entry for account bob](https://github.com/Gustav-Magnussen/FDP/blob/main/graphical/images/bob.png)
 ![User entry for account john](https://github.com/Gustav-Magnussen/FDP/blob/main/graphical/images/john.png)
 
+## Biometric authentication
 
 ### Author
 * [Gustav Martin Kvilhaug Magnussen](https://github.com/Gustav-Magnussen)
