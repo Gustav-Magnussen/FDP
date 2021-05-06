@@ -50,7 +50,7 @@ Within the program [grapicalPassword.py](https://raw.githubusercontent.com/Gusta
 ![User entry for account bob](https://github.com/Gustav-Magnussen/FDP/blob/main/graphical/images/bob.png)
 ![User entry for account john](https://github.com/Gustav-Magnussen/FDP/blob/main/graphical/images/john.png)
 
-## Biometric authentication
+## Biometric implementation
 
 ### Author
 * [Gustav Martin Kvilhaug Magnussen](https://github.com/Gustav-Magnussen)
