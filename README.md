@@ -48,7 +48,7 @@ $ sudo ./dependencies.sh
 Within the program [grapicalPassword.py](https://raw.githubusercontent.com/Gustav-Magnussen/FDP/main/graphical/graphicalPassword_3.py) the lines 25-27 can be uncommented to fill the database that is created with test data for two users: bob and john. This data includes the two accounts with their usernames and argon2 hashed password combinations as seen below:
 
 ![User entry for account bob](https://github.com/Gustav-Magnussen/FDP/blob/main/graphical/images/bob.png)
-![User entry for account john](https://github.com/Gustav-Magnussen/FDP/blob/main/graphical/images/bob.png)
+![User entry for account john](https://github.com/Gustav-Magnussen/FDP/blob/main/graphical/images/john.png)
 
 
 
