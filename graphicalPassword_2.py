@@ -11,18 +11,19 @@ window = tk.Tk()
 
 buttonValues = []
 
+#Connection to database
+connect = sqlite3.connect('users.db')
+
+cr = connect.cursor()
+
+command = """CREATE TABLE IF NOT EXISTS
+users(user_id INTEGER PRIMARY KEY, username TEXT, password TEXT)"""
+cr.execute(command)
+
 def getPasswordUsername(username):
     """
     Gets username and password from database.
     """
-    #Connects to and create table if not existent
-    connect = sqlite3.connect('users.db')
-
-    cr = connect.cursor()
-
-    command = """CREATE TABLE IF NOT EXISTS
-    users(user_id INTEGER PRIMARY KEY, username TEXT, password TEXT)"""
-    cr.execute(command)
     
     cr.execute("SELECT username FROM USERS")
     
@@ -48,9 +49,8 @@ def reset():
     """
     Resets the user entry by restarting the program.
     """
-    python = sys.executable
-    os.execl(python, python, * sys.argv)
-
+    os.execl(sys.executable, sys.executable, *sys.argv)
+    
 def change(button):
     """
     State of clickable buttons.
@@ -95,14 +95,15 @@ def graphicalCheck(name):
     
     if username != 0:
         if name == username:
-            if ph.verify(password, values):
+            try:
+                ph.verify(password, values)
                 output = 1
-            else:
+            except:
+                print('failed')
                 output = 0
     else:
         output = 0
-    
-        
+   
     return output 
 
     
@@ -112,15 +113,19 @@ def usernameClick():
     """
     
     userName = getUserName()
-    if userName in userNames:
-        if graphicalCheck(userName) == 1:
-            loginSuccess()
-        else:
-            wrongInput.grid(column= 1, row=9)   
-    else:
+    cr.execute("SELECT username FROM USERS")
+    users = cr.fetchall()
+    wrong = 1
+    for row in users:
+        for names in row:
+            if names == userName:
+                if graphicalCheck(userName) == 1:
+                    wrong = 0
+                    loginSuccess()
+                else:
+                    wrongInput.grid(column= 1, row=9)   
+    if wrong == 1:
         wrongInput.grid(column= 1, row=9)
-        
-
 
 
 #Frames
@@ -195,6 +200,3 @@ wrongInput = tk.Label(font=("Arial", 12), text='Wrong Username/password')
 
 
 window.mainloop()
-
-
-passwordInput = ''.join(buttonValues)
