@@ -1,31 +1,31 @@
 # FDP
-Github page for my praticle examples implementation of alternative methods for user authentication. This is part of my final degree project titled: Alternative methods of user authentication and development of practical examples. It contains a two implementation of alternative methods for user authentication: a graphical implementation and a biometric implementation.
+GitHub page for my practical examples implementation of alternative methods for user authentication. This is part of my final degree project titled: Alternative methods of user authentication and development of practical examples. It contains a two implementation of alternative methods for user authentication: a graphical implementation and a biometric implementation.
 
-# Graphical implemetation
+# Graphical implementation
 
-This implementation can be found in the following [folder](https://github.com/Gustav-Magnussen/FDP/tree/main/graphical) and includes the necessary files to run the program that showcases a practicale [example](https://github.com/Gustav-Magnussen/FDP/blob/main/graphical/graphicalPassword_3.py) of user authentication by utilizing a graphical password. This program is designed for python 3.7.
+This implementation can be found in the following [folder](https://github.com/Gustav-Magnussen/FDP/tree/main/graphical) and includes the necessary files to run the program that showcases a practical [example](https://github.com/Gustav-Magnussen/FDP/blob/main/graphical/graphicalPassword_3.py) of user authentication by utilizing a graphical password. This program is designed for python 3.7.
 
 ### Features
 
 * A graphical password implementation
 * sqlite3 database of users
-* Ability to add aditional users
+* Ability to add additional users
 * A example of graphical user authentication for educational purposes
 
 ### Dependencies
 
-In order for the attached [program](https://raw.githubusercontent.com/Gustav-Magnussen/FDP/main/graphical/graphicalPassword_3.py) to function proparly python 3.7 has to be insatllaed and a number of python packages has to be aquired The program uses the following packages that come with a default installation of python:
+In order for the attached [program](https://raw.githubusercontent.com/Gustav-Magnussen/FDP/main/graphical/graphicalPassword_3.py) to function properly python 3.7 has to be installed  and a number of python packages has to be acquired. The program uses the following packages that come with a default installation of python:
 
 * Os
 * sys
 * sqlite3
 
-Attached is a scripted called [dependencies.sh](https://raw.githubusercontent.com/Gustav-Magnussen/FDP/main/dependencies.sh), this can be used to install the other necessary packages on a Linux Ubuntu enviroment. The other packages that are include in this script and necessary to run the program are:
+Attached is a scripted called [dependencies.sh](https://raw.githubusercontent.com/Gustav-Magnussen/FDP/main/dependencies.sh), this can be used to install the other necessary packages on a Linux Ubuntu environment. The other packages that are included  in this script and necessary to run the program are:
 
 * argon2-cffi
 * python3-tk
 
-The [argon2-cffi](https://pypi.org/project/argon2-cffi/) package is used in order to hash the graphical passwords. Python3-tk is used as to display graphical elements in the program.  These packages can be installed using the following command in a python enviroment:
+The [argon2-cffi](https://pypi.org/project/argon2-cffi/) package is used in order to hash the graphical passwords. Python3-tk is used as to display graphical elements in the program.  These packages can be installed using the following command in a python environment:
 
 ```
 >>>pip install [package]
@@ -33,7 +33,7 @@ The [argon2-cffi](https://pypi.org/project/argon2-cffi/) package is used in orde
 
 ### Installation using script
 
-In order to install features for an ubuntu enviorment the follow commands below can be used on the [dependencies.sh](https://raw.githubusercontent.com/Gustav-Magnussen/FDP/main/dependencies.sh) file:
+In order to install features for an Ubuntu environment the follow commands below can be used on the [dependencies.sh](https://raw.githubusercontent.com/Gustav-Magnussen/FDP/main/dependencies.sh) file:
 
 Making the file executable:
 ```
