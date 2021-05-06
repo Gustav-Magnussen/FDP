@@ -50,6 +50,8 @@ Within the program [grapicalPassword.py](https://raw.githubusercontent.com/Gusta
 ![User entry for account bob](https://github.com/Gustav-Magnussen/FDP/blob/main/graphical/images/bob.png)
 ![User entry for account john](https://github.com/Gustav-Magnussen/FDP/blob/main/graphical/images/john.png)
 
+If this feature is to be used these lines also needs to be removed from the program after the first execution of the program in order to not create duplicate entries.
+
 ## Biometric implementation
 
 ### Author
