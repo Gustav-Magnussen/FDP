@@ -52,6 +52,10 @@ Within the program [grapicalPassword.py](https://raw.githubusercontent.com/Gusta
 
 If this feature is to be used these lines also needs to be removed from the program after the first execution of the program in order to not create duplicate entries.
 
+### Register program
+
+The file [register.py](https://github.com/Gustav-Magnussen/FDP/blob/main/graphical/register_2.py) is invoked within the main program when clicking the register user button. It can also be used as a execute on its own and is capable of adding user accounts. 
+
 ## Biometric implementation
 
 ### Author
