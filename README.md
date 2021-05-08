@@ -77,7 +77,7 @@ The [Python3-tk](https://docs.python.org/3/library/tkinter.html) is used as to d
 >>>pip install [package]
 ```
 
-For compatability with Windows Hello Fingerprint the iuspock's [script](https://github.com/luspock/FingerPrint) is used. This can be downloaded from this [GitHub page](https://github.com/luspock/FingerPrint/blob/master/fingerprint.py). This file has to be located in the same folder as the [program](https://github.com/Gustav-Magnussen/FDP/blob/main/biometric/biometric.py) or the line that imports the fingerprint modules has to be alter to match the correct path. This file also has to be alterd in order to function with the implementation. This can be done by either removing or commenting out the following lines.
+For compatability with Windows Hello Fingerprint iuspock's [script](https://github.com/luspock/FingerPrint) is used. This can be downloaded from the [GitHub page](https://github.com/luspock/FingerPrint/blob/master/fingerprint.py). The fingerprint.py file has to be located in the same folder as the [program](https://github.com/Gustav-Magnussen/FDP/blob/main/biometric/biometric.py) or the line that imports the fingerprint modules has to be alter to match the correct path. This file also has to be alterd in order to function with the implementation. This can be done by either removing or commenting out the following lines from the fingerprint.py program:
 
 ```python
 225 if __name__ == '__main__':
