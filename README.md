@@ -71,7 +71,7 @@ This implementation can be found in the following [folder](https://github.com/Gu
 
 In order for the attached [program](https://github.com/Gustav-Magnussen/FDP/blob/main/biometric/biometric.py) to function properly it needs to be execute on a Windows 10 machine where Windows Hello Fingerprint is implemented. For this project testing has been done using the fingerprint scanner [Kensington verimark](https://www.kensington.com/software/verimark-setup/verimark-setup-guide/). However, most fingerprint scanners that are able to be used in accordance with Windows Hello Fingerprint is compatible. 
 
-The [Python3-tk](https://docs.python.org/3/library/tkinter.html) is used as to display graphical elements in the program and can be installed using this command in a python enviroment:
+The [Python3-tk](https://docs.python.org/3/library/tkinter.html) is used to display graphical elements in the program and can be installed using this command in a python enviroment:
 
 ```
 >>>import tkinter
