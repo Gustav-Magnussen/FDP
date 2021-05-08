@@ -1,31 +1,33 @@
 # FDP
 GitHub page for my practical examples implementation of alternative methods for user authentication. This is part of my final degree project titled: Alternative methods of user authentication and development of practical examples. It contains a two implementation of alternative methods for user authentication: a graphical implementation and a biometric implementation.
 
-## Graphical implementation
+## General Dependencies
 
-This implementation can be found in the following [folder](https://github.com/Gustav-Magnussen/FDP/tree/main/graphical) and includes the necessary files to run the program that showcases a practical [example](https://github.com/Gustav-Magnussen/FDP/blob/main/graphical/graphicalPassword_3.py) of user authentication by utilizing a graphical password. This program is designed for python 3.7.
-
-### Features
-
-* A graphical password implementation
-* sqlite3 database of users
-* Ability to add additional users
-* A example of graphical user authentication for educational purposes
-
-### Dependencies
-
-In order for the attached [program](https://raw.githubusercontent.com/Gustav-Magnussen/FDP/main/graphical/graphicalPassword_3.py) to function properly python 3.7 has to be installed  and a number of python packages has to be acquired. The program uses the following packages that come with a default installation of python:
+In order for the two implementations to function properly python 3.7 has to be installed and a number of python packages has to be acquired. The program uses the following packages that come with a default installation of python:
 
 * Os
 * sys
 * sqlite3
 
-Attached is a scripted called [dependencies.sh](https://raw.githubusercontent.com/Gustav-Magnussen/FDP/main/dependencies.sh), this can be used to install the other necessary packages on a Linux Ubuntu environment. The other packages that are included  in this script and necessary to run the program are:
+## Graphical Implementation
+
+This implementation can be found in the following [folder](https://github.com/Gustav-Magnussen/FDP/tree/main/graphical) and includes the necessary files to run the [program](https://github.com/Gustav-Magnussen/FDP/blob/main/graphical/graphicalPassword_3.py) that showcases a practical example of user authentication by utilizing a graphical password. This program is designed for python 3.7.
+
+### Features
+
+* A graphical password implementation.
+* sqlite3 database of users.
+* Ability to add additional users.
+* A example of graphical user authentication for educational purposes.
+
+### Dependencies
+
+Attached is a scripted called [dependencies.sh](https://raw.githubusercontent.com/Gustav-Magnussen/FDP/main/dependencies.sh), this can be used to install the necessary python packages on a Linux Ubuntu environment. These are:
 
 * argon2-cffi
 * python3-tk
 
-The [argon2-cffi](https://pypi.org/project/argon2-cffi/) package is used in order to hash the graphical passwords. [Python3-tk](https://docs.python.org/3/library/tkinter.html) is used as to display graphical elements in the program.  These packages can be installed using the following command in a python environment:
+The [argon2-cffi](https://pypi.org/project/argon2-cffi/) package is used in order to hash the graphical passwords. [Python3-tk](https://docs.python.org/3/library/tkinter.html) is used as to display graphical elements in the program. These packages can be installed using the following command in a python environment:
 
 ```
 >>>pip install [package]
@@ -57,6 +59,40 @@ If this feature is to be used these lines also needs to be removed from the prog
 The file [register.py](https://github.com/Gustav-Magnussen/FDP/blob/main/graphical/register_2.py) is invoked within the main program when clicking the register user button. It can also be used as a execute on its own and is capable of adding user accounts. 
 
 ## Biometric implementation
+
+This implementation can be found in the following [folder](https://github.com/Gustav-Magnussen/FDP/tree/main/biometric), it includes the program [biometric.py](https://github.com/Gustav-Magnussen/FDP/blob/main/biometric/biometric.py) that showcases a practical example of user authentication using fingerprint scans. This program is designed for python 3.7 on a Windows 10 machine.
+
+### Features
+
+* A fingerprint scann implementation.
+* A example of biometric user authentication for educational purposed.
+
+### Dependencies 
+
+In order for the attached [program](https://github.com/Gustav-Magnussen/FDP/blob/main/biometric/biometric.py) to function properly it needs to be execute on a Windows 10 machine where Windows Hello Fingerprint is implemented. For this project testing has been done using the fingerprint scanner [Kensington verimark](https://www.kensington.com/software/verimark-setup/verimark-setup-guide/). However, most fingerprint scanners that are able to be used in accordance with Windows Hello Fingerprint is compatible. 
+
+The [Python3-tk](https://docs.python.org/3/library/tkinter.html) is used as to display graphical elements in the program and can be installed using this command in a python enviroment:
+
+```
+>>>pip install [package]
+```
+
+For compatability with Windows Hello Fingerprint the iuspock's [script](https://github.com/luspock/FingerPrint) is used. This can be downloaded from this [GitHub page](https://github.com/luspock/FingerPrint/blob/master/fingerprint.py). This file has to be located in the same folder as the [program](https://github.com/Gustav-Magnussen/FDP/blob/main/biometric/biometric.py) or the line that imports the fingerprint modules has to be alter to match the correct path. This file also has to be alterd in order to function with the implementation. This can be done by either removing or commenting out the following lines.
+
+```
+225 if __name__ == '__main__':
+226    myFP = FingerPrint()
+227    try:
+228        myFP.open()
+229        # myFP.identify()
+230        print("Please touch the fingerprint sensor")
+231        if myFP.verify():
+232            print("Hello! Master")
+233        else:
+234            print("Sorry! Man")
+235    finally:
+236        myFP.close()
+```
 
 ### Author
 * [Gustav Martin Kvilhaug Magnussen](https://github.com/Gustav-Magnussen)
