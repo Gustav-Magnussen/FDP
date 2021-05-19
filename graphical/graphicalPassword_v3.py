@@ -1,3 +1,9 @@
+# -*- coding: utf-8 -*-
+"""
+Created on Sat Feb 27 22:53:57 2021
+
+@author: gustav martin
+"""
 import tkinter as tk
 import os
 import sys
@@ -21,10 +27,6 @@ command = """CREATE TABLE IF NOT EXISTS
 users(user_id INTEGER PRIMARY KEY, username TEXT, password TEXT)"""
 cr.execute(command)
 
-#If test users is need the lines below can be uncommented
-#cr.execute("INSERT INTO users (username, password) VALUES (?,?)",('bob','$argon2id$v=19$m=102400,t=2,p=8$JSo0Mx39wcxBVJHsBywhrQ$deop6ytHU+vu2rBAJdEoRA' ))
-#cr.execute("INSERT INTO users (username, password) VALUES (?,?)",('john','$argon2id$v=19$m=102400,t=2,p=8$qGZ6+0cPtsdJOhUpKGho9g$j7pFGeeQssHe/0m7y+ks4g' ))
-#connect.commit()
 
 def getPasswordUsername(username):
     """
