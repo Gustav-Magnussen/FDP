@@ -1,3 +1,9 @@
+# -*- coding: utf-8 -*-
+"""
+Created on Thu May  6 16:22:40 2021
+
+@author: gustav martin
+"""
 import tkinter as tk
 import os
 import sys
